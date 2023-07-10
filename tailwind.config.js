@@ -3,6 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      // container: {
+      //   fluid: '',
+      // },
+      screens: {
+        '3xl': '1920px',
+      },
       fontFamily: {
         gilroy: ['Gilroy', 'sans-serif'],
       },

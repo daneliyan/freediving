@@ -41,6 +41,22 @@ const toggleItem = (item) => {
   }
 }
 
+/**
+ * Компонент "Рейтинг"
+ */
+// $(".rating").each(function () {
+//   var agregate = $(this).find('.rating-agregate').text();
+//   var fulles = 5;
+//   var rightes = (agregate / fulles) * 100;
+//   $(this).find('.progress').css("width", rightes + '%');
+// });
+document.querySelectorAll(".rating").forEach(function (rating) {
+  var agregate = rating.querySelector('.rating-agregate').textContent;
+  var fulles = 5;
+  var rightes = (agregate / fulles) * 100;
+  rating.querySelector('.progress').style.width = rightes + '%';
+});
+
 
 /*=============== SWIPER ===============*/
 /**
@@ -52,6 +68,27 @@ var swiper = new Swiper(".heroSwiper", {
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+});
+
+/**
+ * Слайдер для блока Place
+ */
+var swiper = new Swiper(".placeSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      // Добавляем ведущий ноль к числам от 1 до 9
+      var bulletNumber = (index + 1).toString().padStart(2, '0');
+      return '<span class="' + className + '">' + bulletNumber + "</span>";
     },
   },
 });
