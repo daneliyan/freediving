@@ -64,10 +64,12 @@ document.querySelectorAll(".rating").forEach(function (rating) {
  */
 var swiper = new Swiper(".heroSwiper", {
   pagination: {
-    el: ".swiper-pagination",
+    el: ".hero .swiper-pagination",
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
+      // Добавляем ведущий ноль к числам от 1 до 9
+      var bulletNumber = (index + 1).toString().padStart(2, '0');
+      return '<span class="' + className + '">' + bulletNumber + "</span>";
     },
   },
 });

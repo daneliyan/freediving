@@ -63,7 +63,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .icon-arrow:before {
   content: "\e900";
 }
@@ -103,32 +102,31 @@
   --container-offset: 4rem;
   --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 }
-/* .container--fluid {
-  padding-left: max(4rem, (100% - var(--content-fluid-width)) / 2);
-} */
 @media screen and (min-width: 1024px) {
   .container--fluid {
     padding-left: max(4rem, (100% - var(--content-fluid-width)) / 2) !important;
   }
 }
+/* стилизация карты */
 .map-baloon-info {
   top: calc(50% - 80px);
   left: calc(50% + 20px);
   background: linear-gradient(0deg, rgba(52, 90, 222, 0.12) 0%, rgba(52, 90, 222, 0.12) 100%), rgba(217, 217, 217, 0.01);
 }
 
-
-.header {
+/* затемнение под шапкой */
+main {
   position: relative;
+  z-index: 9;
 }
-.header::before {
+main::before {
   content: '';
   position: absolute;
-  top: 0;left: 0;right: 0;
+  top: 0;left: 0;
   width: 100%;
-  height: 280px;
-  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
-  z-index: -1;
+  height: 240px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%);
+  z-index: 8;
 }
 
 .nav-menu {
@@ -150,12 +148,8 @@
   box-shadow: -30px 4px 40px rgba(10, 26, 42, 0.25);
 }
 
-/* .w-fullPlus {
-  margin-left: -20px;
-  margin-right: -20px;
-} */
 
-
+/* затемнение в блоке about diving */
 .about-diving::before {
   content: '';
   position: absolute;
@@ -174,16 +168,11 @@
   background: linear-gradient(0deg, #0A1A2A 0%, rgba(10, 26, 42, 0.00) 100%);
   z-index: -1;
 }
+
+/* стилизация стандартного слайдера */
 .standartSwiper {
   overflow-x: visible;
 }
-/* .standartSwiper .swiper-slide {
-  width: calc(33.333% - 13px) !important;
-  height: 200px !important;
-} */
-/* .standartSwiper .swiper-slide:last-child {
-  margin-right: 20px;
-} */
 .standartSwiper .swiper-slide > a {
   display: flex;
   align-items: center;
@@ -204,6 +193,7 @@
   z-index: -1;
 }
 
+/* стандартные затемнения */
 .ba::before,
 .team::before {
   content: '';
@@ -224,7 +214,15 @@
   background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
   z-index: -1;
 }
-
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 0;bottom: 0;right: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
+  z-index: -1;
+}
 
 /* ------------- SWIPER ------------- */
 .swiper {
@@ -251,6 +249,7 @@
   bottom: auto;
   top: auto;
   left: auto;
+  width: auto;
 }
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -272,7 +271,6 @@
   color: #91c2f5;
   opacity: 1 !important;
 }
-
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-family: 'icomoon';
@@ -287,7 +285,7 @@
   opacity: 0;
 }
 
-
+/* дополнительные стили для аккордеона */
 .accordion-content {
   overflow: hidden;
   height: 0;
@@ -300,10 +298,7 @@
   transform: rotate(180deg);
 }
 
-
-.placeSwiper .swiper-pagination-bullet {
-  opacity: .7;
-}
+/* слайдер в блоке Place */
 .placeSwiper .swiper-slide::before {
   content: '';
   position: absolute;
@@ -311,10 +306,19 @@
   width: 100%;height: 100%;
   background: rgba(0, 0, 0, 0.20);
 }
+.placeSwiper .swiper-pagination-bullet {
+  opacity: .7;
+}
 
 
 
 @media screen and (max-width: 1023.98px) {
+  main::before,
+  .team::before,
+  .team::after {
+    display: none;
+  }
+
   .about-us {
     background-position-y: 55%;
     background-position-x: 60%;
@@ -335,10 +339,6 @@
     height: 50%;
     background: linear-gradient(180deg, #0A1A2A 0%, rgba(10, 26, 42, 0.00) 100%);
   }
-  .header::before {
-    display: none;
-  }
-  
   .about-diving::before {
     bottom: 0;
     height: 100%;
@@ -350,10 +350,6 @@
 
   .team {
     background-image: none !important;
-  }
-  .team::before,
-  .team::after {
-    display: none;
   }
 
   .swiper-pagination {

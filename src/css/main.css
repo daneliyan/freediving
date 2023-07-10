@@ -646,6 +646,10 @@ body {
   left: auto;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-2 {
   right: 0.5rem;
 }
@@ -678,6 +682,10 @@ body {
   z-index: 50;
 }
 
+.z-\[-2\] {
+  z-index: -2;
+}
+
 .-mx-3 {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
@@ -702,6 +710,10 @@ body {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mb-3 {
@@ -804,12 +816,16 @@ body {
   height: 1.5rem;
 }
 
+.h-\[520px\] {
+  height: 520px;
+}
+
 .h-\[60px\] {
   height: 60px;
 }
 
-.h-\[610px\] {
-  height: 610px;
+.h-auto {
+  height: auto;
 }
 
 .h-fit {
@@ -821,12 +837,12 @@ body {
   height: 100%;
 }
 
-.h-\[520\] {
-  height: 520;
-}
-
 .min-h-\[540px\] {
   min-height: 540px;
+}
+
+.min-h-\[680px\] {
+  min-height: 680px;
 }
 
 .w-1\/2 {
@@ -869,8 +885,16 @@ body {
   width: calc(100% + 1.5rem);
 }
 
+.max-w-2xl {
+  max-width: 42rem;
+}
+
 .max-w-3xl {
   max-width: 48rem;
+}
+
+.max-w-\[1440px\] {
+  max-width: 1440px;
 }
 
 .max-w-\[230px\] {
@@ -1141,6 +1165,10 @@ body {
   padding-bottom: 2rem;
 }
 
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
 .pb-20 {
   padding-bottom: 5rem;
 }
@@ -1179,6 +1207,10 @@ body {
 
 .pt-28 {
   padding-top: 7rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
 }
 
 .pt-4 {
@@ -1267,6 +1299,10 @@ body {
 
 .leading-8 {
   line-height: 2rem;
+}
+
+.leading-9 {
+  line-height: 2.25rem;
 }
 
 .leading-none {
@@ -1432,15 +1468,13 @@ body {
   --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 }
 
-/* .container--fluid {
-  padding-left: max(4rem, (100% - var(--content-fluid-width)) / 2);
-} */
-
 @media screen and (min-width: 1024px) {
   .container--fluid {
     padding-left: max(4rem, (100% - var(--content-fluid-width)) / 2) !important;
   }
 }
+
+/* стилизация карты */
 
 .map-baloon-info {
   top: calc(50% - 80px);
@@ -1448,20 +1482,22 @@ body {
   background: linear-gradient(0deg, rgba(52, 90, 222, 0.12) 0%, rgba(52, 90, 222, 0.12) 100%), rgba(217, 217, 217, 0.01);
 }
 
-.header {
+/* затемнение под шапкой */
+
+main {
   position: relative;
+  z-index: 9;
 }
 
-.header::before {
+main::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
-  height: 280px;
-  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
-  z-index: -1;
+  height: 240px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%);
+  z-index: 8;
 }
 
 .nav-menu {
@@ -1485,10 +1521,7 @@ body {
   box-shadow: -30px 4px 40px rgba(10, 26, 42, 0.25);
 }
 
-/* .w-fullPlus {
-  margin-left: -20px;
-  margin-right: -20px;
-} */
+/* затемнение в блоке about diving */
 
 .about-diving::before {
   content: '';
@@ -1514,18 +1547,11 @@ body {
   z-index: -1;
 }
 
+/* стилизация стандартного слайдера */
+
 .standartSwiper {
   overflow-x: visible;
 }
-
-/* .standartSwiper .swiper-slide {
-  width: calc(33.333% - 13px) !important;
-  height: 200px !important;
-} */
-
-/* .standartSwiper .swiper-slide:last-child {
-  margin-right: 20px;
-} */
 
 .standartSwiper .swiper-slide > a {
   display: flex;
@@ -1550,6 +1576,8 @@ body {
   z-index: -1;
 }
 
+/* стандартные затемнения */
+
 .ba::before,
 .team::before {
   content: '';
@@ -1565,6 +1593,18 @@ body {
 
 .ba::after,
 .team::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
+  z-index: -1;
+}
+
+.hero::before {
   content: '';
   position: absolute;
   left: 0;
@@ -1607,6 +1647,7 @@ body {
   bottom: auto;
   top: auto;
   left: auto;
+  width: auto;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -1648,6 +1689,8 @@ body {
   opacity: 0;
 }
 
+/* дополнительные стили для аккордеона */
+
 .accordion-content {
   overflow: hidden;
   height: 0;
@@ -1662,9 +1705,7 @@ body {
   transform: rotate(180deg);
 }
 
-.placeSwiper .swiper-pagination-bullet {
-  opacity: .7;
-}
+/* слайдер в блоке Place */
 
 .placeSwiper .swiper-slide::before {
   content: '';
@@ -1676,7 +1717,17 @@ body {
   background: rgba(0, 0, 0, 0.20);
 }
 
+.placeSwiper .swiper-pagination-bullet {
+  opacity: .7;
+}
+
 @media screen and (max-width: 1023.98px) {
+  main::before,
+  .team::before,
+  .team::after {
+    display: none;
+  }
+
   .about-us {
     background-position-y: 55%;
     background-position-x: 60%;
@@ -1706,10 +1757,6 @@ body {
     background: linear-gradient(180deg, #0A1A2A 0%, rgba(10, 26, 42, 0.00) 100%);
   }
 
-  .header::before {
-    display: none;
-  }
-
   .about-diving::before {
     bottom: 0;
     height: 100%;
@@ -1722,11 +1769,6 @@ body {
 
   .team {
     background-image: none !important;
-  }
-
-  .team::before,
-  .team::after {
-    display: none;
   }
 
   .swiper-pagination {
@@ -1847,6 +1889,14 @@ body {
     margin-bottom: 8rem;
   }
 
+  .max-lg\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
+  .max-lg\:mb-64 {
+    margin-bottom: 16rem;
+  }
+
   .max-lg\:mr-auto {
     margin-right: auto;
   }
@@ -1863,8 +1913,16 @@ body {
     margin-top: 16rem;
   }
 
+  .max-lg\:flex {
+    display: flex;
+  }
+
   .max-lg\:hidden {
     display: none;
+  }
+
+  .max-lg\:h-\[520px\] {
+    height: 520px;
   }
 
   .max-lg\:w-full {
@@ -1965,12 +2023,20 @@ body {
     margin-right: -1.5rem;
   }
 
+  .sm\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
   .sm\:aspect-square {
     aspect-ratio: 1 / 1;
   }
 
   .sm\:h-6 {
     height: 1.5rem;
+  }
+
+  .sm\:min-h-\[90vh\] {
+    min-height: 90vh;
   }
 
   .sm\:w-40 {
@@ -2006,6 +2072,11 @@ body {
          column-gap: 3.5rem;
   }
 
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2013,6 +2084,10 @@ body {
 
   .md\:leading-7 {
     line-height: 1.75rem;
+  }
+
+  .md\:leading-\[66px\] {
+    line-height: 66px;
   }
 }
 
@@ -2126,6 +2201,14 @@ body {
     min-height: 660px;
   }
 
+  .lg\:w-2\/5 {
+    width: 40%;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
+  }
+
   .lg\:w-36 {
     width: 9rem;
   }
@@ -2140,18 +2223,6 @@ body {
 
   .lg\:w-auto {
     width: auto;
-  }
-
-  .lg\:w-2\/6 {
-    width: 33.333333%;
-  }
-
-  .lg\:w-2\/5 {
-    width: 40%;
-  }
-
-  .lg\:w-3\/5 {
-    width: 60%;
   }
 
   .lg\:max-w-\[40\%\] {
@@ -2255,6 +2326,10 @@ body {
     padding-bottom: 5rem;
   }
 
+  .lg\:pb-48 {
+    padding-bottom: 12rem;
+  }
+
   .lg\:pb-80 {
     padding-bottom: 20rem;
   }
@@ -2273,6 +2348,10 @@ body {
 
   .lg\:pt-48 {
     padding-top: 12rem;
+  }
+
+  .lg\:pt-\[230px\] {
+    padding-top: 230px;
   }
 
   .lg\:text-2xl {
@@ -2436,8 +2515,17 @@ body {
     padding-top: 4rem;
   }
 
+  .\32xl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
   .\32xl\:text-\[10rem\] {
     font-size: 10rem;
+  }
+
+  .\32xl\:leading-\[100px\] {
+    line-height: 100px;
   }
 }
 
