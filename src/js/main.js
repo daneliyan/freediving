@@ -96,6 +96,27 @@ var swiper = new Swiper(".placeSwiper", {
 });
 
 /**
+ * Слайдер для блока faq-head (отображается в моб.версии)
+ */
+var swiper = new Swiper(".faqSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      // Добавляем ведущий ноль к числам от 1 до 9
+      var bulletNumber = (index + 1).toString().padStart(2, '0');
+      return '<span class="' + className + '">' + bulletNumber + "</span>";
+    },
+  },
+});
+
+/**
  * Цикл для слайдеров одинакового типа (.standartSwiper) с родителем (.standartbl)
  */
 if (document.querySelectorAll('.standartSwiper').length > 0) {

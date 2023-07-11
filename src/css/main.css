@@ -670,6 +670,30 @@ body {
   top: auto;
 }
 
+.-top-4 {
+  top: -1rem;
+}
+
+.-top-6 {
+  top: -1.5rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
+.-top-1 {
+  top: -0.25rem;
+}
+
+.-top-3 {
+  top: -0.75rem;
+}
+
+.-top-8 {
+  top: -2rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -792,6 +816,10 @@ body {
   aspect-ratio: 19/27;
 }
 
+.aspect-\[64\/60\] {
+  aspect-ratio: 64/60;
+}
+
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
@@ -824,6 +852,10 @@ body {
   height: 60px;
 }
 
+.h-\[740px\] {
+  height: 740px;
+}
+
 .h-auto {
   height: auto;
 }
@@ -837,6 +869,23 @@ body {
   height: 100%;
 }
 
+.max-h-\[900px\] {
+  max-height: 900px;
+}
+
+.max-h-fit {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.max-h-28 {
+  max-height: 7rem;
+}
+
+.max-h-80 {
+  max-height: 20rem;
+}
+
 .min-h-\[540px\] {
   min-height: 540px;
 }
@@ -845,8 +894,16 @@ body {
   min-height: 680px;
 }
 
+.min-h-\[60px\] {
+  min-height: 60px;
+}
+
 .w-1\/2 {
   width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
 }
 
 .w-20 {
@@ -883,6 +940,14 @@ body {
 
 .w-fullMobile {
   width: calc(100% + 1.5rem);
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .max-w-2xl {
@@ -1011,6 +1076,10 @@ body {
   border-radius: 9999px;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-b-\[1\.25rem\] {
   border-bottom-right-radius: 1.25rem;
   border-bottom-left-radius: 1.25rem;
@@ -1046,6 +1115,11 @@ body {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
 .border-b-white {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -1075,6 +1149,11 @@ body {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .bg-\[auto_100\%\] {
@@ -1113,6 +1192,14 @@ body {
 
 .p-7 {
   padding: 1.75rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
 }
 
 .px-3 {
@@ -1221,6 +1308,14 @@ body {
   padding-top: 1.75rem;
 }
 
+.pb-28 {
+  padding-bottom: 7rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1317,6 +1412,11 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .text-opacity-5 {
@@ -1616,6 +1716,19 @@ main::before {
   z-index: -1;
 }
 
+.faq-head .bg-image::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 530px;
+  max-height: 90%;
+  background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
+  z-index: 0;
+}
+
 /* ------------- SWIPER ------------- */
 
 .swiper {
@@ -1834,8 +1947,55 @@ main::before {
   border-color: rgb(145 194 245 / var(--tw-border-opacity));
 }
 
+.focus\:border-blue-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
 .focus\:text-opacity-80:focus {
   --tw-text-opacity: 0.8;
+}
+
+.focus\:ring-blue-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:border-gray-600 {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  }
+
+  .dark\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:placeholder-gray-400::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+  }
+
+  .dark\:placeholder-gray-400::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+  }
+
+  .dark\:focus\:border-blue-500:focus {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  }
+
+  .dark\:focus\:ring-blue-500:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+  }
 }
 
 @media not all and (min-width: 1536px) {
@@ -1984,6 +2144,10 @@ main::before {
     padding: 2rem;
   }
 
+  .max-lg\:pt-\[5\.4rem\] {
+    padding-top: 5.4rem;
+  }
+
   .max-lg\:text-center {
     text-align: center;
   }
@@ -2008,8 +2172,24 @@ main::before {
     right: 0.75rem;
   }
 
+  .max-sm\:mb-32 {
+    margin-bottom: 8rem;
+  }
+
+  .max-sm\:hidden {
+    display: none;
+  }
+
   .max-sm\:aspect-\[39\/53\] {
     aspect-ratio: 39/53;
+  }
+
+  .max-sm\:pb-16 {
+    padding-bottom: 4rem;
+  }
+
+  .max-sm\:pt-28 {
+    padding-top: 7rem;
   }
 
   .max-sm\:text-center {
@@ -2025,6 +2205,10 @@ main::before {
 
   .sm\:mb-32 {
     margin-bottom: 8rem;
+  }
+
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:aspect-square {
@@ -2114,6 +2298,14 @@ main::before {
 
   .lg\:right-16 {
     right: 4rem;
+  }
+
+  .lg\:right-4 {
+    right: 1rem;
+  }
+
+  .lg\:-top-6 {
+    top: -1.5rem;
   }
 
   .lg\:-mx-0 {
@@ -2223,6 +2415,22 @@ main::before {
 
   .lg\:w-auto {
     width: auto;
+  }
+
+  .lg\:w-2 {
+    width: 0.5rem;
+  }
+
+  .lg\:w-20 {
+    width: 5rem;
+  }
+
+  .lg\:w-24 {
+    width: 6rem;
+  }
+
+  .lg\:w-28 {
+    width: 7rem;
   }
 
   .lg\:max-w-\[40\%\] {
@@ -2354,6 +2562,10 @@ main::before {
     padding-top: 230px;
   }
 
+  .lg\:pb-36 {
+    padding-bottom: 9rem;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2468,6 +2680,10 @@ main::before {
          column-gap: 1.75rem;
   }
 
+  .xl\:pb-36 {
+    padding-bottom: 9rem;
+  }
+
   .xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2489,12 +2705,24 @@ main::before {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:right-4 {
+    right: 1rem;
+  }
+
+  .\32xl\:-top-6 {
+    top: -1.5rem;
+  }
+
   .\32xl\:min-h-\[740px\] {
     min-height: 740px;
   }
 
   .\32xl\:w-5\/12 {
     width: 41.666667%;
+  }
+
+  .\32xl\:w-28 {
+    width: 7rem;
   }
 
   .\32xl\:gap-x-24 {
