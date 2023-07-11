@@ -768,6 +768,18 @@ body {
   margin-top: auto;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -874,6 +886,10 @@ body {
   min-height: 680px;
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -914,12 +930,20 @@ body {
   width: 106px;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-fullMobile {
   width: calc(100% + 1.5rem);
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-2xl {
@@ -936,6 +960,18 @@ body {
 
 .max-w-\[230px\] {
   max-width: 230px;
+}
+
+.max-w-none {
+  max-width: none;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .shrink-0 {
@@ -980,6 +1016,11 @@ body {
 
 .gap-7 {
   gap: 1.75rem;
+}
+
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 
 .gap-x-14 {
@@ -1030,6 +1071,10 @@ body {
 
 .gap-y-7 {
   row-gap: 1.75rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-x-hidden {
@@ -1124,6 +1169,10 @@ body {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-right-top {
+  background-position: right top;
 }
 
 .bg-no-repeat {
@@ -1262,8 +1311,20 @@ body {
   padding-top: 1.75rem;
 }
 
-.pt-80 {
-  padding-top: 20rem;
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-left {
@@ -1674,6 +1735,19 @@ main::before {
   z-index: 0;
 }
 
+.about-us::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 530px;
+  max-height: 90%;
+  background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
+  z-index: -1;
+}
+
 /* ------------- SWIPER ------------- */
 
 .swiper {
@@ -1786,7 +1860,7 @@ main::before {
     display: none;
   }
 
-  .about-us {
+  .aboutbl {
     background-position-y: 55%;
     background-position-x: 60%;
   }
@@ -1842,6 +1916,10 @@ main::before {
 
   .swiper-pagination-bullet {
     font-size: 22px;
+  }
+
+  .about-us {
+    background-image: none !important;
   }
 }
 
@@ -1937,6 +2015,11 @@ main::before {
 
   .max-lg\:order-1 {
     order: 1;
+  }
+
+  .max-lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .max-lg\:mb-16 {
@@ -2247,6 +2330,10 @@ main::before {
     margin-top: 72px;
   }
 
+  .lg\:mb-8 {
+    margin-bottom: 2rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -2291,6 +2378,10 @@ main::before {
     width: 9rem;
   }
 
+  .lg\:w-4\/12 {
+    width: 33.333333%;
+  }
+
   .lg\:w-48 {
     width: 12rem;
   }
@@ -2321,6 +2412,10 @@ main::before {
 
   .lg\:flex-row {
     flex-direction: row;
+  }
+
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 
   .lg\:flex-nowrap {
@@ -2428,28 +2523,16 @@ main::before {
     padding-top: 12rem;
   }
 
-  .lg\:pt-80 {
-    padding-top: 20rem;
-  }
-
-  .lg\:pt-\[230px\] {
-    padding-top: 230px;
-  }
-
-  .lg\:pt-4 {
-    padding-top: 1rem;
-  }
-
-  .lg\:pt-44 {
-    padding-top: 11rem;
-  }
-
-  .lg\:pt-6 {
-    padding-top: 1.5rem;
+  .lg\:pt-60 {
+    padding-top: 15rem;
   }
 
   .lg\:pt-64 {
     padding-top: 16rem;
+  }
+
+  .lg\:pt-\[230px\] {
+    padding-top: 230px;
   }
 
   .lg\:text-2xl {
@@ -2570,10 +2653,6 @@ main::before {
     padding-bottom: 9rem;
   }
 
-  .xl\:pt-80 {
-    padding-top: 20rem;
-  }
-
   .xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2615,6 +2694,10 @@ main::before {
     width: 41.666667%;
   }
 
+  .\32xl\:w-6\/12 {
+    width: 50%;
+  }
+
   .\32xl\:gap-x-24 {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
@@ -2623,6 +2706,11 @@ main::before {
   .\32xl\:py-32 {
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .\32xl\:py-80 {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
   }
 
   .\32xl\:pb-20 {
