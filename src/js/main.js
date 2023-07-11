@@ -117,6 +117,59 @@ var swiper = new Swiper(".faqSwiper", {
 });
 
 /**
+ * Слайдер на странице Trips Article
+ */
+var swiper = new Swiper(".tripblSwiper", {
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+  pagination: {
+    el: ".tripbl .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      // Добавляем ведущий ноль к числам от 1 до 9
+      var bulletNumber = (index + 1).toString().padStart(2, '0');
+      return '<span class="' + className + '">' + bulletNumber + "</span>";
+    },
+  },
+  breakpoints: {
+    1024: {
+      navigation: {
+        nextEl: ".tripbl .second-button-next.swiper-button-next",
+      },
+    }
+  }
+});
+
+/**
+ * Слайдер на странице Course Article
+ */
+var swiper = new Swiper(".courseGallerySwiper", {
+  navigation: {
+    prevEl: ".course-gallery .swiper-nav .swiper-button-prev",
+    nextEl: ".course-gallery .swiper-nav .swiper-button-next",
+  },
+  pagination: {
+    el: ".course-gallery .swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      // Добавляем ведущий ноль к числам от 1 до 9
+      var bulletNumber = (index + 1).toString().padStart(2, '0');
+      return '<span class="' + className + '">' + bulletNumber + "</span>";
+    },
+  },
+  breakpoints: {
+    1024: {
+      navigation: {
+        prevEl: ".course-gallery .second-button-prev.swiper-button-prev",
+        nextEl: ".course-gallery .second-button-next.swiper-button-next",
+      },
+    }
+  }
+});
+
+/**
  * Цикл для слайдеров одинакового типа (.standartSwiper) с родителем (.standartbl)
  */
 if (document.querySelectorAll('.standartSwiper').length > 0) {

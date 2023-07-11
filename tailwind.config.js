@@ -16,6 +16,7 @@ module.exports = {
         main: '#0a1a2a',
         secondary: '#2f3c4a',
         accent: '#91c2f5',
+        lightGrey: '#d9d9d9',
       },
       opacity: {
         15: '.15',

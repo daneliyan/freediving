@@ -150,7 +150,8 @@ main::before {
 
 
 /* затемнение в блоке about diving */
-.about-diving::before {
+.about-diving::before,
+.tripbl::before {
   content: '';
   position: absolute;
   left: 0;top: -1px;right: 0;
@@ -159,7 +160,8 @@ main::before {
   background: linear-gradient(180deg, #0A1A2A 0%, rgba(10, 26, 42, 0.00) 100%);
   z-index: -1;
 }
-.about-diving::after {
+.about-diving::after,
+.tripbl::after {
   content: '';
   position: absolute;
   left: 0;bottom: -1px;right: 0;
@@ -214,6 +216,55 @@ main::before {
   background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
   z-index: -1;
 }
+/* .courses-page .ba::before {
+  content: '';
+  position: absolute;
+  left: 0;top: -149px;right: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
+  z-index: -1;
+}
+.courses-page .ba::after {
+  height: 100%;
+} */
+  .courses-page .ba::before {
+    display: none;
+  }
+  .courses-page .ba::after {
+    height: 100%;
+  }
+
+@media screen and (max-width: 1023.98px) {
+  .courses-page .ba::before {
+    content: '';
+    position: absolute;
+    left: 0;top: -149px;right: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
+    z-index: -1;
+  }
+  .course-gallery::before {
+    content: '';
+    position: absolute;
+    left: 0;top: -149px;right: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
+    z-index: -1;
+  }
+  /* .course-gallery::after {
+    content: '';
+    position: absolute;
+    left: 0;bottom: -49px;right: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(180deg, #0A1A2A 0%, rgba(10, 26, 42, 0.00) 100%);
+    z-index: -1;
+  } */
+}
+
 .hero::before,
 .category::before {
   content: '';
@@ -305,6 +356,9 @@ main::before {
 .swiper-button-prev.swiper-button-disabled {
   opacity: 0;
 }
+.tripbl .swiper-button-next.swiper-button-disabled {
+  opacity: .2;
+}
 
 /* дополнительные стили для аккордеона */
 .accordion-content {
@@ -331,12 +385,16 @@ main::before {
   opacity: .7;
 }
 
-
+.list-disc {
+  padding-left: 30px;
+}
 
 @media screen and (max-width: 1023.98px) {
   main::before,
   .team::before,
-  .team::after {
+  .team::after,
+  .tripbl::before,
+  .tripbl::after {
     display: none;
   }
 
