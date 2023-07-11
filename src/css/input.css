@@ -63,6 +63,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-arrow-left:before {
+  content: "\e90b";
+}
 .icon-arrow:before {
   content: "\e900";
 }
@@ -343,14 +346,15 @@ main::before {
   color: #91c2f5;
   opacity: 1 !important;
 }
-.swiper-button-next:after,
-.swiper-button-prev:after {
+.swiper-button-next:after {
   font-family: 'icomoon';
   content: '\e900';
   font-size: 22px;
 }
 .swiper-button-prev:after {
-  rotate: 180deg;
+  font-family: 'icomoon';
+  content: '\e90b';
+  font-size: 22px;
 }
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {

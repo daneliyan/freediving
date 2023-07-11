@@ -1,24 +1,30 @@
-/*=============== SHOW MENU ===============*/
+/**
+ * Burger Menu
+ */
 const navMenu = document.getElementById('nav-menu'),
   navToggle = document.getElementById('nav-toggle'),
   navToggleIcon = document.querySelector('#nav-toggle i');
-
-/*===== MENU SHOW =====*/
 navToggle.addEventListener('click', () => {
   navMenu.classList.toggle('show-menu');
   navToggleIcon.classList.toggle('icon-close');
 });
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll('.nav-menu a')
 const linkAction = () => {
   const navMenu = document.getElementById('nav-menu')
-  // When we click on each nav__link, we remove the show-menu class
   navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+document.addEventListener("click", function (event) {
+  if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+    navMenu.classList.remove("show-menu");
+    navToggleIcon.classList.remove('icon-close');
+  }
+});
 
 
-/*=============== ACCORDION ===============*/
+/**
+ * Accordion
+ */
 const accordionItems = document.querySelectorAll('.accordion')
 accordionItems.forEach((item) => {
   const accordionHeader = item.querySelector('.accordion h3 button')
@@ -44,12 +50,6 @@ const toggleItem = (item) => {
 /**
  * Компонент "Рейтинг"
  */
-// $(".rating").each(function () {
-//   var agregate = $(this).find('.rating-agregate').text();
-//   var fulles = 5;
-//   var rightes = (agregate / fulles) * 100;
-//   $(this).find('.progress').css("width", rightes + '%');
-// });
 document.querySelectorAll(".rating").forEach(function (rating) {
   var agregate = rating.querySelector('.rating-agregate').textContent;
   var fulles = 5;

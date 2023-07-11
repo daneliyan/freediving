@@ -626,8 +626,16 @@ body {
   position: sticky;
 }
 
+.-right-16 {
+  right: -4rem;
+}
+
 .-top-14 {
   top: -3.5rem;
+}
+
+.-top-16 {
+  top: -4rem;
 }
 
 .-top-8 {
@@ -676,30 +684,6 @@ body {
 
 .top-auto {
   top: auto;
-}
-
-.-right-4 {
-  right: -1rem;
-}
-
-.-top-16 {
-  top: -4rem;
-}
-
-.-right-12 {
-  right: -3rem;
-}
-
-.-top-12 {
-  top: -3rem;
-}
-
-.-right-16 {
-  right: -4rem;
-}
-
-.-right-20 {
-  right: -5rem;
 }
 
 .z-0 {
@@ -810,6 +794,13 @@ body {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
 }
 
 .block {
@@ -1605,6 +1596,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-left:before {
+  content: "\e90b";
+}
+
 .icon-arrow:before {
   content: "\e900";
 }
@@ -1946,15 +1941,16 @@ main::before {
   opacity: 1 !important;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
+.swiper-button-next:after {
   font-family: 'icomoon';
   content: '\e900';
   font-size: 22px;
 }
 
 .swiper-button-prev:after {
-  rotate: 180deg;
+  font-family: 'icomoon';
+  content: '\e90b';
+  font-size: 22px;
 }
 
 .swiper-button-next.swiper-button-disabled,
