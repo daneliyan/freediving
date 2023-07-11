@@ -214,7 +214,8 @@ main::before {
   background: linear-gradient(180deg, rgba(10, 26, 42, 0.00) 0%, #0A1A2A 100%);
   z-index: -1;
 }
-.hero::before {
+.hero::before,
+.category::before {
   content: '';
   position: absolute;
   left: 0;bottom: 0;right: 0;
